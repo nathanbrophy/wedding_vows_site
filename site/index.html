@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Stars Aligned · Nathan &amp; Tina Marie</title>
+  <meta name="description" content="Nathan &amp; Tina Marie · September 20, 2026">
+  <meta name="theme-color" content="#030705">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23071009'/%3E%3Cpath d='M32 9c1.7 13 10 21.3 23 23-13 1.7-21.3 10-23 23-1.7-13-10-21.3-23-23 13-1.7 21.3-10 23-23z' fill='%23cdb4f0'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <main class="sky">
+    <canvas class="sky__canvas" aria-hidden="true"></canvas>
+
+    <!-- Ceremony lines: two slots that crossfade -->
+    <div class="lines" aria-live="polite">
+      <div class="line">
+        <div class="line__text"></div>
+        <div class="line__sub" hidden></div>
+      </div>
+      <div class="line">
+        <div class="line__text"></div>
+        <div class="line__sub" hidden></div>
+      </div>
+    </div>
+
+    <section class="landing" id="landing">
+      <div class="landing__inner">
+        <div class="landing__eyebrow">The Stars Aligned</div>
+        <h1 class="landing__names">Nathan <span class="landing__amp">&amp;</span> Tina&nbsp;Marie</h1>
+        <div class="landing__date">September 20, 2026</div>
+        <button class="pill pill--ceremony" type="button" data-action="open">Ceremony</button>
+      </div>
+    </section>
+
+    <section class="primer" id="primer" hidden>
+      <div class="primer__card">
+        <h2 class="primer__eyebrow">Before the vows</h2>
+        <ul class="primer__steps">
+          <li>Silence your phone</li>
+          <li>Turn your brightness all the way up</li>
+          <li>When the officiant invites you, tap begin, and every screen in the room will align</li>
+        </ul>
+        <button class="pill pill--begin" type="button" data-action="begin">Begin</button>
+        <button class="primer__back" type="button" data-action="exit">go back</button>
+      </div>
+    </section>
+
+    <section class="countdown" id="countdown" hidden>
+      <div class="countdown__eyebrow">the stars are aligning</div>
+      <div class="countdown__num">✦</div>
+    </section>
+
+    <button class="exit" id="exit" type="button" aria-label="Exit" data-action="exit" hidden>✕</button>
+  </main>
+</body>
+
+</html>
